@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>
+            Destinos | SHEAL Travel Agency
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7fefb2e73c.js" crossorigin="anonymous">
+        </script>
+        <link rel="icon" href="assets/favico.png">
+        <link rel="stylesheet" href="destinos.css">
+    </head>
+    <body>
+        
+<!-- =========================================
+        HEADER / NAVEGACIÓN PRINCIPAL
+        ========================================= -->
+        <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SHEAL Travel Agency">
+        <img src="assets/logo.png" alt="SHEAL Travel Agency">
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">INICIO</a>
+        <a href="destinos.html#destinos" id="link-destinos">DESTINOS</a>
+        <a href="destinos.html#nosotros" id="link-nosotros">SOBRE NOSOTROS</a>
+        <a class="nav-cta" href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20planear%20mi%20pr%C3%B3ximo%20viaje..." target="_blank" rel="noopener">
+          <span>
+            <i class="fa-regular fa-bell"></i>
+          </span> COTIZÁ TU VIAJE
+        </a>
+        <div class="social-nav" aria-label="Redes sociales">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/sheal_travel?igsi=NnhuNnoxNWViYzZy" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+<main>
+            
+<!-- =========================================
+            HERO DE DESTINOS
+            ========================================= -->
+            <section class="hero" id="principio">
+                <div class="hero-bg">
+                </div>
+                <div class="hero-overlay">
+                </div>
+                <div class="container hero-content">
+                    <p class="eyebrow">
+                        DESCUBRÍ. ELEGÍ. VIAJÁ.
+                    </p>
+                    <h1>
+                        Destinos que inspiran
+                    </h1>
+                    <div class="script">
+                        Tu próxima aventura comienza acá.
+                    </div>
+                    <p>
+                        Explorá nuestros destinos y encontrá el lugar perfecto para tu próximo viaje.
+                    </p>
+                </div>
+            </section>
+            
+<!-- =========================================
+            SECCIÓN DE DESTINOS
+========================================= -->
+<section class="destinos" id="destinos">
+                <div class="container">
+                    <div class="heading">
+                        <div>
+                            <p class="eyebrow dark">
+                                NUESTROS DESTINOS
+                            </p>
+                            <h2>
+                                Elegí dónde querés ir
+                            </h2>
+                            <p>
+                                Conocé nuestras opciones y solicitá una cotización personalizada.
+                            </p>
+                        </div>
+                        
+                        <div class="search">
+                            <i class="fa-solid fa-magnifying-glass">
+                            </i>
+                            <input id="search"
+                            placeholder="Buscar destino...">
+                        </div>
+                    </div>
+                    <div class="filters">
+                        <button class="" data-filter="todos">
+                            Todos
+                        </button>
+                        <button
+                        data-filter="argentina">
+                            Argentina
+                        </button>
+                        <button data-filter="peru">
+                            Perú
+                        </button>
+                        <button
+                        data-filter="naturaleza">
+                            Naturaleza
+                        </button>
+                        <button
+                        data-filter="cultura">
+                            Cultura
+                        </button>
+                        <button data-filter="aventura">
+                            Aventura
+                        </button>
+                    </div>
+<div class="grid" id="grid">
+<!-- DESTINO: BUENOS AIRES -->
+                        <article class="card" data-cat="argentina cultura" data-search="buenos aires argentina">
+                            <div class="photo">
+                                <img src="assets/buenosaires.png" alt="Buenos Aires">
+                                <span>
+                                    Argentina
+                                </span>
+                            </div>
+                            <div class="body">
+                                <small>
+                                    <i class="fa-solid fa-location-dot">
+                                    </i>
+                                    Argentina
+                                </small>
+                                <h3>
+                                    Buenos Aires
+                                </h3>
+                                <p>
+                                    Una ciudad llena de cultura, gastronomía e historia.
+                                </p>
+                                <div class="meta">
+                                    <i class="fa-regular fa-clock">
+                                    </i>
+                                    Duración a consultar
+                                </div>
+                                <a
+                                href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20cotizar%20un%20viaje%20a%20Buenos%20Aires."
+                                target="_blank">
+                                    COTIZAR DESTINO
+                                    <i class="fa-solid fa-arrow-right">
+                                    </i>
+                                </a>
+                            </div>
+                        </article>
+ <!-- DESTINO: LIMA -->
+                        <article class="card" data-cat="peru cultura" data-search="lima perú">
+                            <div class="photo">
+                                <img src="assets/lima.jpg" alt="Lima">
+                                <span>
+                                    Perú
+                                </span>
+                            </div>
+                            <div class="body">
+                                <small>
+                                    <i class="fa-solid fa-location-dot">
+                                    </i>
+                                    Perú
+                                </small>
+                                <h3>
+                                    Lima
+                                </h3>
+                                <p>
+                                    Gastronomía, historia y una combinación única entre tradición y modernidad.
+                                </p>
+                                <div class="meta">
+                                    <i class="fa-regular fa-clock">
+                                    </i>
+                                    Duración a consultar
+                                </div>
+                                <a
+                                href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20cotizar%20un%20viaje%20a%20Lima."
+                                target="_blank">
+                                    COTIZAR DESTINO
+                                    <i class="fa-solid fa-arrow-right">
+                                    </i>
+                                </a>
+                            </div>
+                        </article>
+<!-- DESTINO: BARILOCHE -->
+                        <article class="card" data-cat="argentina naturaleza aventura" data-search="bariloche argentina">
+                            <div class="photo">
+                                <img src="assets/bariloche.jpg" alt="Bariloche">
+                                <span>
+                                    Argentina
+                                </span>
+                            </div>
+                            <div class="body">
+                                <small>
+                                    <i class="fa-solid fa-location-dot">
+                                    </i>
+                                    Argentina
+                                </small>
+                                <h3>
+                                    Bariloche
+                                </h3>
+                                <p>
+                                    Lagos, montañas y paisajes ideales para disfrutar de la naturaleza.
+                                </p>
+                                <div class="meta">
+                                    <i class="fa-regular fa-clock">
+                                    </i>
+                                    Duración a consultar
+                                </div>
+                                <a
+                                href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20cotizar%20un%20viaje%20a%20Bariloche."
+                                target="_blank">
+                                    COTIZAR DESTINO
+                                    <i class="fa-solid fa-arrow-right">
+                                    </i>
+                                </a>
+                            </div>
+                        </article>
+<!-- DESTINO: CHICLAYO -->
+                        <article class="card" data-cat="peru naturaleza cultura" data-search="chiclayo perú">
+                            <div class="photo">
+                                <img src="assets/cix.jpg" alt="Chiclayo">
+                                <span>
+                                    Perú
+                                </span>
+                            </div>
+                            <div class="body">
+                                <small>
+                                    <i class="fa-solid fa-location-dot">
+                                    </i>
+                                    Perú
+                                </small>
+                                <h3>
+                                    Chiclayo
+                                </h3>
+                                <p>
+                                    Historia, cultura, gastronomía y paisajes del norte peruano.
+                                </p>
+                                <div class="meta">
+                                    <i class="fa-regular fa-clock">
+                                    </i>
+                                    Duración a consultar
+                                </div>
+                                <a
+                                href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20cotizar%20un%20viaje%20a%20Chiclayo."
+                                target="_blank">
+                                    COTIZAR DESTINO
+                                    <i class="fa-solid fa-arrow-right">
+                                    </i>
+                                </a>
+                            </div>
+                        </article>
+<!-- DESTINO: CÓRDOBA -->
+                        <article class="card" data-cat="argentina naturaleza aventura" data-search="córdoba argentina">
+                            <div class="photo">
+                                <img src="assets/cordoba.jpg" alt="Córdoba">
+                                <span>
+                                    Argentina
+                                </span>
+                            </div>
+                            <div class="body">
+                                <small>
+                                    <i class="fa-solid fa-location-dot">
+                                    </i>
+                                    Argentina
+                                </small>
+                                <h3>
+                                    Córdoba
+                                </h3>
+                                <p>
+                                    Sierras, naturaleza y experiencias para descubrir.
+                                </p>
+                                <div class="meta">
+                                    <i class="fa-regular fa-clock">
+                                    </i>
+                                    Duración a consultar
+                                </div>
+                                <a
+                                href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20cotizar%20un%20viaje%20a%20C%C3%B3rdoba."
+                                target="_blank">
+                                    COTIZAR DESTINO
+                                    <i class="fa-solid fa-arrow-right">
+                                    </i>
+                                </a>
+                            </div>
+                        </article>
+<!-- DESTINO: IGUAZÚ -->
+                        <article class="card" data-cat="argentina naturaleza aventura" data-search="iguazú argentina">
+                            <div class="photo">
+                                <img src="assets/iguazu.jpg" alt="Iguazú">
+                                <span>
+                                    Argentina
+                                </span>
+                            </div>
+                            <div class="body">
+                                <small>
+                                    <i class="fa-solid fa-location-dot">
+                                    </i>
+                                    Argentina
+                                </small>
+                                <h3>
+                                    Iguazú
+                                </h3>
+                                <p>
+                                    Las Cataratas del Iguazú y una experiencia inolvidable.
+                                </p>
+                                <div class="meta">
+                                    <i class="fa-regular fa-clock">
+                                    </i>
+                                    Duración a consultar
+                                </div>
+                                <a
+                                href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20cotizar%20un%20viaje%20a%20Iguaz%C3%BA."
+                                target="_blank">
+                                    COTIZAR DESTINO
+                                    <i class="fa-solid fa-arrow-right">
+                                    </i>
+                                </a>
+                            </div>
+                        </article>
+<!-- DESTINO: MENDOZA -->
+                        <article class="card" data-cat="argentina naturaleza cultura" data-search="mendoza argentina">
+                            <div class="photo">
+                                <img src="assets/medoza.jpg" alt="Mendoza">
+                                <span>
+                                    Argentina
+                                </span>
+                            </div>
+                            <div class="body">
+                                <small>
+                                    <i class="fa-solid fa-location-dot">
+                                    </i>
+                                    Argentina
+                                </small>
+                                <h3>
+                                    Mendoza
+                                </h3>
+                                <p>
+                                    Viñedos, bodegas y paisajes de montaña para una experiencia especial.
+                                </p>
+                                <div class="meta">
+                                    <i class="fa-regular fa-clock">
+                                    </i>
+                                    Duración a consultar
+                                </div>
+                                <a
+                                href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20cotizar%20un%20viaje%20a%20Mendoza."
+                                target="_blank">
+                                    COTIZAR DESTINO
+                                    <i class="fa-solid fa-arrow-right">
+                                    </i>
+                                </a>
+                            </div>
+                        </article>
+
+<!-- DESTINO: EJEMPLO 
+                        <article class="card" data-cat="argentina naturaleza cultura" data-search="mendoza argentina">
+                            <div class="photo">
+                                <img src="assets/medoza.jpg" alt="Mendoza">
+                                <span>
+                                    Ejemplo <!--Se encuentra en la img--
+                                </span>
+                            </div>
+                            <div class="body">
+                                <small>
+                                    <i class="fa-solid fa-location-dot">
+                                    </i>
+                                    JAPON <!-- se encuentra ariiba de H3--
+                                </small>
+                                <h3>
+                                    USA 
+                                </h3>
+                                <p>
+                                    Viñedos, bodegas y paisajes de montaña para una experiencia especial.
+                                </p>
+                                <div class="meta">
+                                    <i class="fa-regular fa-clock">
+                                    </i>
+                                    Duración a consultar
+                                </div>
+                                <a
+                                href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20cotizar%20un%20viaje%20a%20Mendoza."
+                                target="_blank">
+                                    COTIZAR DESTINO 
+                                    <i class="fa-solid fa-arrow-right">
+                                    </i>                      
+                                </a>
+                            </div>
+                        </article>-->
+</div>        
+</section>
+            
+ <!-- =========================================
+       CTA / COTIZACIÓN PERSONALIZADA
+       ========================================= -->
+  <section class="cta" id="cta">
+    <div class="cta-bg"></div>
+    <div class="cta-overlay"></div>
+
+    <div class="container cta-inner">
+
+      <div class="cta-visual" aria-hidden="true">
+        <div class="cta-globe">
+          <i class="fa-solid fa-earth-americas"></i>
+        </div>
+        <i class="fa-solid fa-plane cta-plane"></i>
+      </div>
+
+      <div class="cta-copy">
+        <h2>¿NO ENCONTRÁS TU DESTINO?</h2>
+        <p>
+          Creamos viajes a medida según tus sueños y necesidades.
+          <br>
+          Contanos qué tenés en mente y lo hacemos realidad.
+        </p>
+      </div>
+
+      <a
+        class="cta-action"
+        href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20planear%20un%20viaje%20personalizado."
+        target="_blank"
+        rel="noopener"
+      >
+        <span>COTIZÁ TU VIAJE PERSONALIZADO</span>
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="nosotros">
+    <div class="container footer-grid">
+      <div>
+        <h4>NAVEGACIÓN</h4>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#destinos">Destinos</a>
+        <a href="index.html#paquetes">Paquetes</a>
+        <a href="index.html#nosotros">Sobre nosotros</a>
+      </div>
+
+      <div>
+        <h4>AYUDA</h4>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de privacidad</a>
+      </div>
+
+      <div>
+        <h4>CONTACTO</h4>
+        <a href="https://wa.me/5491173583657" target="_blank" rel="noopener">◉ WhatsApp</a>
+        <a href="https://www.instagram.com/sheal_travel?igsi=NnhuNnoxNWViYzZy" target="_blank" rel="noopener">◎ Instagram</a>
+        <span>⌖ Buenos Aires, Argentina</span>
+      </div>
+
+      <div class="sponsors">
+        <h4>Con el patrocinio de...</h4>
+        <div class="sponsor-logos">
+          <div class="sponsor jd">
+            <img src="assets/jd-store.png" alt="JD Store">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2025 SHEAL Travel Agency. Todos los derechos reservados.</span>
+      <span>✈</span>
+    </div>
+  </footer>
+        <script src="destinos.js">
+        </script>
+    </body>
+</html>

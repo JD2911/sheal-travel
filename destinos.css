@@ -1,0 +1,924 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+:root {
+    --navy: #001b2e;
+    --navy2: #00263d;
+    --gold: #c9a24a;
+    --cream: #f5f1e8;
+    --text: #1a2630;
+    --muted: #68737c
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6
+}
+
+a {
+    color: rgba(255, 255, 255, 0.774);
+    text-decoration: none;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto
+}
+
+/* HEADER */
+.site-header {
+  height: 125px;
+  background: rgba(0, 27, 46, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0%;
+  z-index: 1000   
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px
+}
+
+.brand {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0
+}
+
+.brand img {
+    width: 100%;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain
+}
+
+.main-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(22px, 3vw, 48px)
+}
+
+.main-nav>a:not(.nav-cta) {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    transition: color .25s ease
+}
+
+.social-nav a {
+    color: var(--gold-light);
+    font-size: 13px
+}
+
+.main-nav>a:not(.nav-cta):hover,
+.active {
+    color: var(--gold) !important
+}
+
+.nav-cta,
+.gold-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 15px 22px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    text-decoration: none
+}
+/* BOTONES DORADOS GENERALES */
+.nav-cta {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--gold) !important;
+  border: 1px solid var(--gold) !important;
+  transition: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.nav-cta:hover,
+.nav-cta:active,
+.nav-cta:focus,
+.nav-cta:focus-visible,
+.nav-cta:visited {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #b68e37 !important;
+  border-color: #b68e37 !important;
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* BOTONES REDES SOCIALES  */
+
+.social-nav {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-left: -10px;
+}
+
+.social-nav a {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 13px;
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+
+.social-nav a:hover {
+  color: #fff;
+  background: rgba(201,162,74,.16);
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none
+}
+
+.hero {
+    position: relative;
+    min-height: 410px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('assets/bariloche.jpg') center/cover
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #001b2eee, #001b2e88, #001b2e33)
+}
+
+.hero-content {
+    position: relative;
+    padding: 75px 0
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px
+}
+
+.hero h1 {
+    font: 500 clamp(50px, 7vw, 78px)/.95 'Cormorant Garamond', serif;
+    margin-top: 10px
+}
+
+.script {
+    font: 48px 'Great Vibes', cursive;
+    color: var(--gold);
+    margin: 8px 0 18px
+}
+
+.hero-content>p:last-child {
+    max-width: 600px;
+    font-size: 15px
+}
+
+.destinos {
+    padding: 85px 0 100px
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 30px
+}
+
+.heading h2 {
+    font: 500 48px/1 'Cormorant Garamond', serif;
+    color: var(--navy);
+    margin: 8px 0 13px
+}
+
+.heading p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 14px
+}
+
+.search {
+    width: 285px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #001b2e1c;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px
+}
+
+.search i {
+    color: #b68e37
+}
+
+.search input {
+    width: 100%;
+    border: 0;
+    outline: 0
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px
+}
+
+.filters button {
+    border: 1px solid #c9a24a88;
+    background: transparent;
+    color: var(--navy);
+    padding: 9px 17px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.filters button:hover,
+.filters button.active {
+    background: var(--gold);
+    color: #fff
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px #001b2e1f;
+    transition: .3s
+}
+
+.card:hover {
+    transform: translateY(-7px)
+}
+
+.card.hide {
+    display: none
+}
+
+.photo {
+    height: 275px;
+    position: relative;
+    overflow: hidden
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s
+}
+
+.card:hover img {
+    transform: scale(1.06)
+}
+
+.photo:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 45%, #001b2e99)
+}
+
+.photo span {
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    left: 16px;
+    background: #001b2ed9;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 9px;
+    font-weight: 700
+}
+
+.body {
+    padding: 22px
+}
+
+.body small {
+    color: #b68e37;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase
+}
+
+.body h3 {
+    font: 600 34px/1 'Cormorant Garamond', serif;
+    color: var(--navy);
+    margin: 7px 0 10px;
+    text-transform: uppercase
+}
+
+.body p {
+    color: var(--muted);
+    font-size: 13px;
+    min-height: 62px
+}
+
+.meta {
+    border-block: 1px solid #001b2e18;
+    padding: 12px 0;
+    margin: 13px 0;
+    color: #68737c;
+    font-size: 11px;
+    font-weight: 600
+}
+
+.meta i {
+    color: #b68e37
+}
+
+.body>a {
+    display: flex;
+    justify-content:space-between;
+    border: 1px solid var(--gold);
+    padding: 12px;
+    color: #001b2e;
+    font-size: 12px;
+    font-weight: 700
+}
+
+
+.body>a:hover {
+    background: var(--navy2);
+    border: 1px solid var(--navy2);
+    color: var(--gold)
+    
+}
+
+/* =========================================
+   CTA COMPACTO — ESTILO REFERENCIA
+========================================= */
+
+.cta {
+    position: relative;
+    overflow: hidden;
+    min-height: 154px;
+    padding: 18px 0;
+    color: #fff;
+    background: var(--cream);
+}
+
+.cta-bg,
+.cta-overlay {
+    position: absolute;
+    top: 18px;
+    bottom: 18px;
+    left: 50%;
+    width: min(calc(100% - 60px), 1320px);
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.cta-bg {
+    background:
+        linear-gradient(90deg, rgba(0,27,46,.80), rgba(0,27,46,.90)),
+        url("assets/iguazu.jpg") center / cover;
+    box-shadow: 0 8px 22px rgba(0,0,0,.20);
+}
+
+.cta-overlay {
+    background: linear-gradient(90deg, rgba(0,27,46,.14), rgba(0,27,46,.44));
+}
+
+.cta-inner {
+    position: relative;
+    z-index: 2;
+    min-height: 118px;
+
+    display: grid;
+    grid-template-columns: 105px minmax(0,1fr) auto;
+    align-items: center;
+    gap: 26px;
+
+    padding: 14px 0;
+}
+
+.cta-visual {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-globe {
+    width: 72px;
+    height: 72px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(201,162,74,.75);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 37px;
+    box-shadow: inset 0 0 0 7px rgba(201,162,74,.05);
+}
+
+.cta-plane {
+    position: absolute;
+    top: 8px;
+    right: 1px;
+    color: var(--gold);
+    font-size: 17px;
+    transform: rotate(18deg);
+}
+
+.cta-copy {
+    min-width: 0;
+}
+
+.cta-copy h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    line-height: .95;
+    font-weight: 600;
+    letter-spacing: .2px;
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+.cta-copy p {
+    max-width: 610px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255,255,255,.78);
+}
+
+.cta-action {
+    min-height: 42px;
+    padding: 0 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+
+    color: var(--gold);
+    background: transparent;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .45px;
+    white-space: nowrap;
+
+    transition: background .25s ease, color .25s ease,
+                border-color .25s ease, transform .25s ease;
+}
+
+.cta-action i {
+    color: var(--gold);
+    font-size: 15px;
+}
+
+.cta-action:hover {
+    border-color: var(--gold);
+}
+
+.cta-action:hover i {
+    color: var(--gold);
+}
+
+.footer {
+    background: #00182a;
+    color: rgba(255,255,255,.8);
+    padding: 28px 0 15px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    gap: 45px;
+}
+
+.footer h4 {
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 14px;
+    letter-spacing: .5px;
+}
+
+.footer-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer a,
+.footer span {
+    font-size: 9px;
+    color: rgba(255,255,255,.7);
+}
+
+.footer a:hover {
+    color: var(--gold-light);
+}
+
+.sponsors {
+    border-left: 1px solid rgba(255,255,255,.18);
+    padding-left: 35px;
+}
+
+.sponsor-logos {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sponsor {
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: .9;
+}
+
+.sponsor small {
+    font-family: "Montserrat", sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+}
+
+.sponsor.jd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor.jd img {
+    width: 110px;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    margin-top: 25px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 8px;
+    color: rgba(255,255,255,.45);
+}
+
+@media(max-width:900px) {
+    .main-nav {
+        gap: 14px
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:760px) {
+    .container {
+        width: calc(100% - 32px)
+    }
+
+    .site-header {
+        height: 90px
+    }
+
+    .header-inner {
+        height: 100%;
+        min-height: 90px
+    }
+
+    .brand {
+        width: 120px
+    }
+
+    .brand img {
+        width: 100%;
+        max-height: 65px
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+        width: 45px;
+        height: 45px;
+        background: none;
+        border: 1px solid #ffffff55;
+        border-radius: 4px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px
+    }
+
+    .menu-toggle span {
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        margin: 5px auto
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        padding: 22px;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, .25)
+    }
+
+    .main-nav.open {
+        display: flex
+    }
+
+    .main-nav>a:not(.nav-cta) {
+        padding: 14px 8px;
+        border-bottom: 1px solid #ffffff12
+    }
+
+    .nav-cta {
+        margin-top: 15px
+    }
+
+    .social-nav {
+        justify-content: center;
+        margin: 18px 0 2px;
+        padding-top: 14px;
+        border-top: 1px solid #ffffff12
+    }
+
+    .heading {
+        display: block
+    }
+
+    .search {
+        width: 100%;
+        margin-top: 20px
+    }
+
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .cta-inner {
+        display: block;
+        padding: 55px 0
+    }
+
+    .cta a {
+        display: inline-block;
+        margin-top: 22px
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:500px) {
+    .destinos {
+        padding: 65px 0 75px
+    }
+
+    .heading h2 {
+        font-size: 40px
+    }
+
+    .filters {
+        overflow: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px
+    }
+
+    .filters button {
+        white-space: nowrap
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr
+    }
+
+    .script {
+        font-size: 38px
+    }
+}
+/* =========================================
+   CTA RESPONSIVE
+========================================= */
+
+@media (max-width: 760px) {
+    .cta {
+        min-height: 156px;
+        padding: 18px 0;
+    }
+
+    .cta-bg,
+    .cta-overlay {
+        top: 18px;
+        bottom: 18px;
+        width: calc(100% - 30px);
+        border-radius: 9px;
+    }
+
+    .cta-inner {
+        min-height: 135px;
+        grid-template-columns: 64px minmax(0,1fr);
+        gap: 14px;
+        padding: 15px 0;
+    }
+
+    .cta-visual {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cta-globe {
+        width: 52px;
+        height: 52px;
+        font-size: 27px;
+    }
+
+    .cta-plane {
+        top: 0;
+        right: -2px;
+        font-size: 13px;
+    }
+
+    .cta-copy h2 {
+        font-size: 21px;
+    }
+
+    .cta-copy p {
+        font-size: 8px;
+        line-height: 1.45;
+    }
+
+    .cta-action {
+        grid-column: 1 / -1;
+        width: 100%;
+        min-height: 40px;
+        font-size: 8px;
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cta-inner {
+        grid-template-columns: 55px minmax(0,1fr);
+        gap: 11px;
+        min-height: 128px;
+    }
+
+    .cta-copy h2 {
+        font-size: 18px;
+    }
+
+    .cta-copy p {
+        font-size: 7.5px;
+    }
+
+    .cta-action {
+        font-size: 7.5px;
+    }
+}
+/* =========================================
+   RESPONSIVE GENERAL - TABLET + CELULAR
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+  /* CONTENEDOR PRINCIPAL */
+  .cta {
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(28px, 5vw, 50px) clamp(14px, 4vw, 32px);
+  }
+
+  .cta-inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(20px, 4vw, 40px);
+    box-sizing: border-box;
+  }
+
+  /* ILUSTRACIÓN */
+  .cta-visual {
+    flex: 1 1 220px;
+    min-width: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* TEXTO */
+  .cta-copy {
+    flex: 1 1 320px;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .cta-copy h2 {
+    margin: 0 0 12px;
+    font-size: clamp(24px, 4vw, 38px);
+    line-height: 1.15;
+    word-wrap: break-word;
+  }
+
+  .cta-copy p {
+    margin: 0;
+    font-size: clamp(13px, 2vw, 17px);
+    line-height: 1.5;
+  }
+
+  /* BOTÓN */
+  .cta-action {
+    flex: 0 1 340px;
+    width: 100%;
+    max-width: 340px;
+
+    min-height: 50px;
+    padding: 13px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    box-sizing: border-box;
+    text-align: center;
+
+    font-size: clamp(11px, 1.8vw, 14px);
+    line-height: 1.3;
+  }
+
+  .cta-action span {
+    white-space: normal;
+  }
+
+  /* EVITA DESBORDES */
+  .cta img,
+  .cta svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
