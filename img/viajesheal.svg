@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="ocean" cx="38%" cy="28%" r="75%">
+      <stop offset="0" stop-color="#32c7ee"/>
+      <stop offset="0.55" stop-color="#159ed8"/>
+      <stop offset="1" stop-color="#075eae"/>
+    </radialGradient>
+
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9f26d"/>
+      <stop offset="0.55" stop-color="#78c943"/>
+      <stop offset="1" stop-color="#3f9e38"/>
+    </linearGradient>
+
+    <linearGradient id="plane" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.7" stop-color="#e9eef4"/>
+      <stop offset="1" stop-color="#cdd7e2"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="9" flood-opacity=".22"/>
+    </filter>
+
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+
+    <clipPath id="globeClip">
+      <circle cx="300" cy="300" r="205"/>
+    </clipPath>
+  </defs>
+
+  <!-- Transparent background -->
+  <g filter="url(#shadow)">
+
+    <!-- Globe -->
+    <circle cx="300" cy="300" r="205" fill="url(#ocean)"/>
+
+    <!-- Subtle globe highlight -->
+    <ellipse cx="245" cy="218" rx="145" ry="105" fill="#fff" opacity=".10"/>
+
+    <!-- Continents -->
+    <g clip-path="url(#globeClip)" fill="url(#land)" stroke="#4eaa39" stroke-width="2">
+      <!-- North America -->
+      <path d="M105 185
+               C120 155 147 135 174 123
+               C193 114 210 117 218 128
+               C222 137 210 144 207 153
+               C201 164 214 169 227 177
+               C236 184 231 195 218 201
+               C204 207 194 216 181 222
+               C166 229 155 247 143 252
+               C130 257 119 248 118 235
+               C117 220 109 208 104 198
+               C100 193 101 188 105 185 Z"/>
+
+      <!-- Central America / Caribbean -->
+      <path d="M185 225 C192 224 198 230 199 236 C200 242 194 247 187 246
+               C181 245 177 239 179 233 Z
+               M210 215 C216 212 221 214 224 219 C225 223 220 227 214 226 Z"/>
+
+      <!-- South America -->
+      <path d="M205 252
+               C224 245 243 250 253 263
+               C263 276 262 293 254 307
+               C247 320 241 333 240 347
+               C238 364 228 381 220 397
+               C214 409 212 430 204 440
+               C198 448 190 444 186 434
+               C182 423 184 411 178 400
+               C172 389 168 373 164 358
+               C160 341 165 325 174 312
+               C181 302 187 289 184 276
+               C182 267 190 257 205 252 Z"/>
+
+      <!-- Europe -->
+      <path d="M340 150
+               C351 141 366 137 381 139
+               C391 140 399 147 399 155
+               C398 162 388 165 380 164
+               C371 163 366 169 358 173
+               C348 178 337 173 334 166
+               C331 160 335 154 340 150 Z"/>
+
+      <!-- Africa -->
+      <path d="M342 185
+               C360 176 382 179 394 190
+               C407 203 412 223 409 243
+               C406 260 400 277 392 293
+               C385 308 373 328 358 338
+               C346 346 332 337 327 325
+               C322 313 322 299 317 287
+               C313 276 317 261 319 250
+               C321 235 316 222 323 211
+               C328 202 332 192 342 185 Z"/>
+
+      <!-- Madagascar -->
+      <path d="M414 293
+               C421 286 427 289 429 297
+               C431 307 426 320 420 329
+               C415 335 410 332 409 323
+               C408 312 410 301 414 293 Z"/>
+
+      <!-- Asia -->
+      <path d="M391 150
+               C411 135 434 130 455 138
+               C468 144 482 154 491 168
+               C496 176 490 184 480 184
+               C469 183 460 175 452 177
+               C444 180 440 188 432 193
+               C423 199 415 195 410 188
+               C405 181 397 176 389 173
+               C380 170 382 157 391 150 Z"/>
+
+      <!-- Australia -->
+      <path d="M443 356
+               C460 344 481 346 493 358
+               C505 370 505 389 496 402
+               C488 414 468 419 452 412
+               C438 406 431 394 434 380
+               C436 370 437 363 443 356 Z"/>
+    </g>
+
+    <!-- small islands -->
+    <g fill="url(#land)" stroke="#4eaa39" stroke-width="1.5">
+      <ellipse cx="414" cy="137" rx="7" ry="4"/>
+      <ellipse cx="426" cy="128" rx="5" ry="3"/>
+      <ellipse cx="455" cy="194" rx="5" ry="3"/>
+      <ellipse cx="468" cy="202" rx="7" ry="4"/>
+      <ellipse cx="135" cy="265" rx="6" ry="3"/>
+    </g>
+
+    <!-- Flight path behind plane -->
+    <path d="M86 286
+             C165 205 262 210 335 260
+             C415 315 500 318 538 258"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-dasharray="10 16"
+          opacity=".9"/>
+
+    <!-- Plane shadow -->
+    <ellipse cx="298" cy="304" rx="84" ry="18" fill="#073b6c" opacity=".22" filter="url(#softShadow)"/>
+
+    <!-- Passenger jet -->
+    <g transform="translate(285 278) rotate(8)" filter="url(#shadow)">
+      <!-- tail -->
+      <path d="M-69 15 L-92 -22 Q-96 -30 -88 -30 L-53 -6 Z" fill="url(#plane)" stroke="#c6d0da" stroke-width="2"/>
+      <path d="M-76 10 L-95 34 Q-99 40 -91 41 L-52 22 Z" fill="#f5f8fb" stroke="#c6d0da" stroke-width="2"/>
+
+      <!-- fuselage -->
+      <path d="M-82 5
+               C-50 -7 16 -12 86 -1
+               C101 1 111 7 117 14
+               C109 20 100 23 86 25
+               C15 34 -48 29 -82 16
+               C-92 13 -92 8 -82 5 Z"
+            fill="url(#plane)" stroke="#c6d0da" stroke-width="2"/>
+
+      <!-- nose -->
+      <path d="M86 -1 C106 0 119 6 125 13 C119 20 106 24 88 25 Z"
+            fill="#dfe6ed" opacity=".9"/>
+
+      <!-- upper wing -->
+      <path d="M10 0 L34 -43 Q38 -50 44 -46 L32 3 Z"
+            fill="#f9fbfd" stroke="#c6d0da" stroke-width="2"/>
+
+      <!-- lower wing -->
+      <path d="M20 18 L58 52 Q63 57 55 58 L1 25 Z"
+            fill="#f1f5f8" stroke="#c6d0da" stroke-width="2"/>
+
+      <!-- cockpit -->
+      <path d="M88 6 Q98 7 104 12 L96 18 L84 17 Z" fill="#38495a"/>
+      <path d="M101 10 L108 13 L103 16 L97 15 Z" fill="#1f2d3b"/>
+
+      <!-- windows -->
+      <g fill="#4f677a">
+        <circle cx="65" cy="10" r="2"/>
+        <circle cx="58" cy="9" r="2"/>
+        <circle cx="51" cy="8" r="2"/>
+        <circle cx="44" cy="7" r="2"/>
+        <circle cx="37" cy="7" r="2"/>
+        <circle cx="30" cy="6" r="2"/>
+        <circle cx="23" cy="6" r="2"/>
+        <circle cx="16" cy="5" r="2"/>
+      </g>
+
+      <!-- engines -->
+      <g>
+        <ellipse cx="31" cy="22" rx="12" ry="7" fill="#aebbc7"/>
+        <ellipse cx="31" cy="22" rx="7" ry="4.5" fill="#536879"/>
+        <circle cx="31" cy="22" r="2.2" fill="#1e3446"/>
+      </g>
+    </g>
+
+    <!-- Clouds -->
+    <g fill="#fff" opacity=".97" filter="url(#shadow)">
+      <g transform="translate(95 125)">
+        <circle cx="0" cy="14" r="18"/>
+        <circle cx="22" cy="2" r="27"/>
+        <circle cx="50" cy="17" r="20"/>
+        <rect x="0" y="14" width="50" height="18" rx="9"/>
+      </g>
+
+      <g transform="translate(445 165)">
+        <circle cx="0" cy="12" r="17"/>
+        <circle cx="23" cy="0" r="24"/>
+        <circle cx="48" cy="14" r="17"/>
+        <rect x="0" y="12" width="48" height="17" rx="8"/>
+      </g>
+
+      <g transform="translate(420 432)">
+        <circle cx="0" cy="13" r="18"/>
+        <circle cx="25" cy="1" r="26"/>
+        <circle cx="54" cy="15" r="19"/>
+        <rect x="0" y="13" width="54" height="18" rx="9"/>
+      </g>
+
+      <g transform="translate(82 413)">
+        <circle cx="0" cy="12" r="17"/>
+        <circle cx="23" cy="1" r="24"/>
+        <circle cx="49" cy="14" r="18"/>
+        <rect x="0" y="12" width="49" height="17" rx="8"/>
+      </g>
+    </g>
+  </g>
+</svg>

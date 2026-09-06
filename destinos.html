@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="destinos.css">
     </head>
     <body>
-        
+
 <!-- =========================================
         HEADER / NAVEGACIÓN PRINCIPAL
         ========================================= -->
@@ -28,22 +28,27 @@
       </a>
 
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
       <nav class="main-nav" aria-label="Navegación principal">
         <a href="index.html">INICIO</a>
-        <a href="destinos.html#destinos" id="link-destinos">DESTINOS</a>
-        <a href="destinos.html#nosotros" id="link-nosotros">SOBRE NOSOTROS</a>
+        <a href="#destinos" id="link-destinos">DESTINOS</a>
+        <a href="#nosotros" id="link-nosotros">SOBRE NOSOTROS</a>
         <a class="nav-cta" href="https://wa.me/5491173583657?text=Hola%20Sheal%20Travel%21%20Quisiera%20planear%20mi%20pr%C3%B3ximo%20viaje..." target="_blank" rel="noopener">
           <span>
-            <i class="fa-regular fa-bell"></i>
+            <i class="fa-brands fa-whatsapp"></i>
           </span> COTIZÁ TU VIAJE
         </a>
         <div class="social-nav" aria-label="Redes sociales">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/sheal_travel?igsi=NnhuNnoxNWViYzZy" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/sheal_travel?igsi=NnhuNnoxNWViYzZy" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i></a>
         </div>
       </nav>
     </div>
@@ -85,46 +90,28 @@
                                 NUESTROS DESTINOS
                             </p>
                             <h2>
-                                Elegí dónde querés ir
+                                ELIGÍ TU PRÓXIMO DESTINO
                             </h2>
-                            <p>
-                                Conocé nuestras opciones y solicitá una cotización personalizada.
-                            </p>
+                            <P>
+                                Explorá el mundo y encontrá tu próximo destino. ✈️
+                            </P>
                         </div>
-                        
-                        <div class="search">
-                            <i class="fa-solid fa-magnifying-glass">
-                            </i>
-                            <input id="search"
-                            placeholder="Buscar destino...">
-                        </div>
+
                     </div>
                     <div class="filters">
-                        <button class="" data-filter="todos">
-                            Todos
-                        </button>
-                        <button
-                        data-filter="argentina">
-                            Argentina
-                        </button>
-                        <button data-filter="peru">
-                            Perú
-                        </button>
-                        <button
-                        data-filter="naturaleza">
-                            Naturaleza
-                        </button>
-                        <button
-                        data-filter="cultura">
-                            Cultura
-                        </button>
-                        <button data-filter="aventura">
-                            Aventura
-                        </button>
+                        <button class="active" data-filter="todos">TODOS LOS DESTINOS</button>
+                        <button data-filter="asia">ASIA</button>
+                        <button data-filter="africa">ÁFRICA</button>
+                        <button data-filter="america-norte">AMÉRICA DEL NORTE</button>
+                        <button data-filter="america-sur">AMÉRICA DEL SUR</button>
+                        <button data-filter="europa">EUROPA</button>
+                        <button data-filter="oceania">OCEANÍA</button>
+                        <button data-filter="antartida">ANTÁRTIDA</button>
                     </div>
 <div class="grid" id="grid">
 <!-- DESTINO: BUENOS AIRES -->
-                        <article class="card" data-cat="argentina cultura" data-search="buenos aires argentina">
+                        <article class="card" data-cat="america-sur" 
+                        data-search="buenos aires argentina">
                             <div class="photo">
                                 <img src="assets/buenosaires.png" alt="Buenos Aires">
                                 <span>
@@ -158,7 +145,7 @@
                             </div>
                         </article>
  <!-- DESTINO: LIMA -->
-                        <article class="card" data-cat="peru cultura" data-search="lima perú">
+                        <article class="card" data-cat="america-sur" data-search="lima perú">
                             <div class="photo">
                                 <img src="assets/lima.jpg" alt="Lima">
                                 <span>
@@ -192,7 +179,8 @@
                             </div>
                         </article>
 <!-- DESTINO: BARILOCHE -->
-                        <article class="card" data-cat="argentina naturaleza aventura" data-search="bariloche argentina">
+                        <article class="card" data-cat="america-sur"
+                         data-search="bariloche argentina">
                             <div class="photo">
                                 <img src="assets/bariloche.jpg" alt="Bariloche">
                                 <span>
@@ -226,7 +214,8 @@
                             </div>
                         </article>
 <!-- DESTINO: CHICLAYO -->
-                        <article class="card" data-cat="peru naturaleza cultura" data-search="chiclayo perú">
+                        <article class="card" data-cat="america-sur"
+                         data-search="chiclayo perú">
                             <div class="photo">
                                 <img src="assets/cix.jpg" alt="Chiclayo">
                                 <span>
@@ -260,7 +249,8 @@
                             </div>
                         </article>
 <!-- DESTINO: CÓRDOBA -->
-                        <article class="card" data-cat="argentina naturaleza aventura" data-search="córdoba argentina">
+                        <article class="card" data-cat="america-sur"
+                         data-search="córdoba argentina">
                             <div class="photo">
                                 <img src="assets/cordoba.jpg" alt="Córdoba">
                                 <span>
@@ -294,7 +284,8 @@
                             </div>
                         </article>
 <!-- DESTINO: IGUAZÚ -->
-                        <article class="card" data-cat="argentina naturaleza aventura" data-search="iguazú argentina">
+                        <article class="card" data-cat="america-sur"
+                         data-search="iguazú argentina">
                             <div class="photo">
                                 <img src="assets/iguazu.jpg" alt="Iguazú">
                                 <span>
@@ -328,7 +319,8 @@
                             </div>
                         </article>
 <!-- DESTINO: MENDOZA -->
-                        <article class="card" data-cat="argentina naturaleza cultura" data-search="mendoza argentina">
+                        <article class="card" data-cat="america-sur"
+                         data-search="mendoza argentina">
                             <div class="photo">
                                 <img src="assets/medoza.jpg" alt="Mendoza">
                                 <span>
@@ -363,7 +355,8 @@
                         </article>
 
 <!-- DESTINO: EJEMPLO 
-                        <article class="card" data-cat="argentina naturaleza cultura" data-search="mendoza argentina">
+                        <article class="card" data-cat="america-sur"
+                         data-search="mendoza argentina">
                             <div class="photo">
                                 <img src="assets/medoza.jpg" alt="Mendoza">
                                 <span>
@@ -396,7 +389,18 @@
                                 </a>
                             </div>
                         </article>-->
-</div>        
+
+</div> 
+<div id="empty" class="empty-state">
+    <img 
+        src="img/viajesheal.svg" 
+        alt="Explorá el mundo" 
+        class="empty-globe"
+    >
+    <h3>ESTAMOS PREPARANDO<br>NUEVAS OPCIONES<br>PARA VOS</h3>
+    
+    <h2>Destinos No Encontrados... </h2>
+</div>       
 </section>
             
  <!-- =========================================
