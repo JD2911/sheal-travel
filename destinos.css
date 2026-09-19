@@ -539,7 +539,7 @@ a {
 }
 
 .footer a:hover {
-    color: var(--gold-light);
+    color:var(--gold) ;
 }
 
 .sponsors {
